@@ -98,7 +98,7 @@ max_user_id, max_item_id = X.max(axis=0)
 user_net = UserNet(max_user_id + 1)
 item_net = ItemNet(max_item_id + 1, num_genres)
 
-optimizer = optim.Adam(list(user_net.parameters()) + list(item_net.parameters()), lr=0.001)
+optimizer = optim.Adam(list(user_net.parameters()) + list(item_net.parameters()), lr=0.01)
 loss_fn = nn.MSELoss()
 
 # Move networks to GPU if available
